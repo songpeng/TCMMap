@@ -1,0 +1,25 @@
+#+TITLE: The Encyclopaedia of Herbs from Traditional Chinese Medicine
+#+AUTHOR: Songpeng Zu
+#+EMAIL: zusongpeng@gmail.com
+
+* Introduction
+This project aims to provide a much detailed description of herbs from
+traditional Chinese medicine (TCM). Especially:
+1. To collect the compounds in the herbs including the metabolic products in the
+   body.
+2. To label the *Cold* and *Hot* characters of the herbs.
+3. To label the *JUN*, *CHEN*, *ZUO*, and *SHI* characters of the herbs in the
+   formula.
+4. The usage of herbs on cancer treatment from TCM.
+# 4. Analysis of targets of the compounds.
+# 5. Analysis of GO or other functions of herbs (or formula)
+
+This project can be treated as an extension of our previous database
+_HerbBioMap_. We hope to spend one or two year to finish the first version.
+
+* Results
+** TODO collect the compounds [%]
+- [ ] Establish the standard criteria.
+- [ ] Design the standard records.
+- [ ] Collect the compounds.
+** TODO The usage of herbs on cancer treatment from TCM.
