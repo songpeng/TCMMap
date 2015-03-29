@@ -18,7 +18,7 @@ This project can be treated as an extension of our previous database
 _HerbBioMap_. We hope to spend one or two year to finish the first version.
 
 * Results
-** TODO collect the compounds [%]
+** TODO Collect the compounds [%]
 - [ ] Establish the standard criteria.
 - [ ] Design the standard records.
 - [ ] Collect the compounds.
