@@ -22,4 +22,16 @@ _HerbBioMap_. We hope to spend one or two year to finish the first version.
 - [ ] Establish the standard criteria.
 - [ ] Design the standard records.
 - [ ] Collect the compounds.
-** TODO The usage of herbs on cancer treatment from TCM.
+** TODO The usage of herbs on cancer treatment in China [%].
+1. [ ] Collect the targets or mechanisms of the compounds from the herbs above.
+   - [ ] Get the drugs from DrugBank with similar chemical structures.
+   - [ ] Get the possible targets from ChEMBL or other database.
+   - [ ] Literature mining
+2. [ ] Analysis the functions of herbs.
+   - [ ] Target-based analysis.\\
+     In this part, we use the collected data above to analyze different
+     compounds' functions independently. Note that some compounds may not
+     directly target the tumor-related genes, such as "FU ZHENG" compounds.
+   - [ ] Network-based analysis.\\
+     In this part, we try to analyze the combination effects of different
+     compounds based on the network analysis.
