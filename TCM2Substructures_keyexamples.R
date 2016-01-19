@@ -7,7 +7,8 @@ require(ChemmineR)
 require(xlsx)
 
 #-- Load TCM data.
-tcmcid <- read.xlsx("812种化学成分和靶标集合.xlsx",1,colClasses="numeric",
+# Note: change the file name into English.
+tcmcid <- read.xlsx("800tcm.xlsx",1,colClasses="numeric",
                     colIndex=1)
 
 #-- Function to extract the substructures.
