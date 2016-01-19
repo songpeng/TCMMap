@@ -1,0 +1,53 @@
+---
+title: "Ginkgolide"
+author: "Songpeng Zu"
+date: "Monday, September 15, 2014"
+output: pdf_document
+---
+
+##Introduction
+
+1. __Install ChemmineR__
+
+```{r eval=FALSE}
+setwd("/home/lab/ginkgolide")
+source("http://bioconductor.org/biocLite.R") # Sources the biocLite.R installation script.
+biocLite("ChemmineR") # Installs ChemmineR package.
+biocLite("ChemmineOB") # Installs ChemmineOB add-on package.
+biocLite("fmcsR") # Installs fmcR add-on package.
+install.packages("corrplot")
+
+```
+
+2. __Classification of ginkgolide__
+
+```{r fig.width=12, fig.height=8}
+library("ChemmineR")
+library(fmcsR)
+library(ChemmineOB)
+library(corrplot)
+compounds <- getIds(c(9909368,6324617,16211418,441296,46937025))
+#????????(ginkgolide)?ֱ??????????Ͷ????????????ж?????????ginkgolide A(GA??CID:9909368)??ginkgolide B(GB??CID:6324617)??ginkgolide C(GC??CID:16211418)??ginkgolide J(GJ??CID:441296)??ginkgolide M(GM??CID: 46937025)
+#propOB(compounds[1])
+cid(compounds) <- c("GA","GB","GC","GJ","GM")
+plot(compounds,regenCoords=TRUE,print=FALSE,griddim=c(2,3))
+```
+
+3. __Chemical Similaritites among ginkgolides__
+* Atom Pairs Simialrity
+```{r}
+APsim <- matrix(0,nrow=5,ncol=5)
+FPsim <- matrix(0,nrow=5,ncol=5)
+for(i in 1:5){
+  for(j in 1:5){
+    APsim[i,j] <- cmp.similarity(sdf2ap(compounds[i]),sdf2ap(compounds[j]))
+    FPsim[i,j] <- fpSim(desc2fp(sdf2ap(compounds[i])),desc2fp(sdf2ap(compounds[j])))
+  }
+}
+```
+```{r}
+corrplot(APsim,is.corr=FALSE,tl.pos="n")
+corrplot(FPsim,is.corr=FALSE,tl.pos="n")
+```
+
+ 
