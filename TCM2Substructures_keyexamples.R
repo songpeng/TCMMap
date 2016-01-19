@@ -21,6 +21,7 @@ writecomsub <- function(cids,writefilenm){
                 col.names = FALSE)
 }
 
+#-- Get the subs of compounds from TCM by mannually.
 compounds <- getIds(unlist(tcmcid$CID))
 cid(compounds) <- sdfid(compounds)
 fpset3 <- fp2bit(compounds)
@@ -34,4 +35,4 @@ write.table(tcmdata,file="tcm2subs800_pubchem.txt",quote=FALSE, sep="\t",
 
 #-- Load Drugs data.
 drugcid <- read.table("ANdrugsfromBaiMing.txt",colClasses="numeric",header=FALSE)
-compoundsdrug <- getIds(drugcid$V1)
+writecomsub(drugcid$V1,"ANdrugs2sub.txt")
